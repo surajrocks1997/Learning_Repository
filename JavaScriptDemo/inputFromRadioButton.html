@@ -1,0 +1,29 @@
+<!-- taking input from radio button -->
+<html>
+    <head>
+        <title>Hello There</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function myfunction() {
+            var rd1 = document.getElementById("rd1");
+            var rd2 = document.getElementById("rd2");
+
+            if(rd1.checked==true){
+                alert("first channel selected");
+            }
+            else if(rd2.checked==true){
+                alert("second channel selected");
+            }
+            else
+                alert("none of the channels are selected");
+        }
+        </script>
+
+        <input type="radio" id="rd1" name="group1" value="Suraj">Suraj</input>
+        <br>
+        <input type="radio" id="rd2" name="group1" value="The Elite">The Elite</input>
+        <br>
+        <button onclick="myfunction()">Click Me</button>
+    </body>
+</html>

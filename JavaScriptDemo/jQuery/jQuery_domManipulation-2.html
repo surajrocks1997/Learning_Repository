@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>JQuery - DOM Manipulation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>DOM Manipulation</h2>
+        <button id="btn1">Add Class</button>
+        <button id="btn2">Remove Class</button>
+        <button id="btn3">Toggle Class</button>
+        <button id="btn4">CSS</button>
+
+        <div id="div1" class="mydiv">
+            <p id="p1" class="p1class" value="Hello World">
+                This is third <b>paragraph</b> in <i>second</i>
+                 division
+            </p>
+            <p id="p2" class="p2class" value="Hello World">
+                    This is third <b>paragraph</b> in <i>second</i>
+                     division
+                </p>
+        </div>
+    </body>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function() {
+                $("#div1").addClass("mydivclass newparaclass")
+            });
+            $("#btn2").click(function() {
+                $("#div1").removeClass("mydivclass")
+            });
+            $("#btn3").click(function() {
+                $("#div1").toggleClass("mydivclass newparaclass");
+            });
+            $("#btn4").click(function() {
+                alert($("#div1").css("font-size"));     //displays css property of element
+                $("#div1").css("font-size","24px");     //changes the css property
+            });
+        });
+    </script>
+</html>

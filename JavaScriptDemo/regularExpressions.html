@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function validate() {
+                var uname = document.getElementById("uname").value;
+                
+                // regx = new RegExp("E00", "i"); // same as below code but Object oriented code
+                
+                var regx = /^([a-zA-Z0-9]{})$/;     
+                // will check for this pattern anywhere in the string
+                //if you put i at the end of /E00/, it won't be case sensitive. It is known as flag
+
+                if(regx.test(uname)){
+                    alert("Valid Username!!");
+                    document.getElementById("label1").style.visibility = "hidden";
+                }
+                else {
+                    // alert("Invalid Username!!");
+                    document.getElementById("label1").style.visibility = "visible";
+                }
+            }
+        </script>
+        <form action="message.html">
+            Username: <input type="text" id="uname">
+            <label for="Username" id="label1" style="color: red; visibility: hidden">
+            Invalid!!!</label>
+            <br>
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>
+</html>

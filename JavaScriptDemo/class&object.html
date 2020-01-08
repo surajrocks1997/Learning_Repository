@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <script type="text/javascript">
+            var car = {
+                car_brand : "Audi",
+                car_model : "A6",
+                car_price : 50000,
+
+                cruiseControl : function() {
+                    document.writeln("It has cruise control");
+                }
+            }
+            car.cruiseControl();
+            document.writeln(car.car_brand);
+            
+            car.fueltype = "Diesel";
+            car.newFunction = function() 
+            {
+                document.write("Added new function and property outside the class");
+            }
+            document.write(car.fueltype);
+            car.newFunction();
+
+
+            function cars(car_brand, car_model, car_price){
+                this.car_brand = car_brand;
+                this.car_model = car_model;
+                this.car_price = car_price;
+
+                this.cruiseControl = function() {
+                    document.write("It has cruise control");
+                }
+            }
+            var c1 = new cars("Audi", "A6", 50000);
+            c1.cruiseControl();
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+

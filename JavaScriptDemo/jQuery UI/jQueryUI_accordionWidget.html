@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.structure.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>Accordian Widget</h2>
+        <div id="panel">
+            <h3>What is Lorem Ipsum?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of 
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic 
+            typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop publishing software</p>
+
+            <h3>What is Lorem Ipsum?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of 
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic 
+            typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop publishing software
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of 
+            type and scrambled it to make a type specimen book.</p>
+
+            <h3>What is Lorem Ipsum?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of 
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic 
+            typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop publishing software</p>
+
+            
+        </div>
+
+    </body>
+    <script src="../../Jquery Library/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="JQuery UI-1.12.1 Library/jquery-ui.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $("#panel").accordion({
+            collapsible: true,
+            event: "click",      //more events: mouseover, dblclick etc
+            animate: 300,       // time in milliseconds
+            active: 1,          // starts from index 0 like array
+            heightStyle: true,
+            icons: {
+                header:"ui-icon-plus",
+                activeHeader:"ui-icon-minus",
+            }
+        });
+        
+    </script>
+</html> 

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.structure.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2 style="text-align: center; color: blue">Auto Complete Feature</h2>
+        <div id="firstdiv" class="mydiv">
+            <label>Enter your favorite city: </label>
+            <input type="text" name="" id="citytextbox">
+        </div>
+        
+    </body>
+    <script src="../../Jquery Library/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="JQuery UI-1.12.1 Library/jquery-ui.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        var mycities = ["Mumbai","New York", "Delhi", "Manhattan", "Bangalore"
+        , "Ottawa", "Ontario", "Bilaspur", "Raipur"];
+
+        $("#citytextbox").autocomplete({
+                source: mycities
+            },
+            {
+                autofocus: true,    
+                delay: 300,         //delay for suggestions to comeup
+                minLength: 2,       //minimun length for suggestions to comeup
+            });
+    </script>
+</html> 

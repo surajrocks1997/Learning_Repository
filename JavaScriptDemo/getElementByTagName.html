@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Hey There
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function changeStyling() {
+            var par = document.getElementsByTagName("p");
+            for (var i = 0; i < par.length; i++) {
+                par[i].style.color = "red";
+            }
+        }
+        </script>
+        <p>Hello There 1</p>
+        <p>Hello There 2</p>
+        <p>Hello There 3</p>
+        <p>Hello There 4</p>
+        <p>Hello There 5</p>
+        <button onclick="changeStyling()">Click me</button>
+    </body>
+</html>

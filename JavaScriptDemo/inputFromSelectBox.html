@@ -1,0 +1,22 @@
+<!-- taking input from select box -->
+
+<html>
+    <head>
+        <title>Hello There</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function myfunction() {
+                var select = document.getElementById("selectbox");
+                alert(select.options[select.selectedIndex].value);
+            }
+        </script>
+        <select id="selectbox">
+            <option value="Suraj">Suraj</option>
+            <option value="The Elite">The Elite</option>
+            <option value="Sun">Sun</option>
+        </select>
+        <br>
+        <button onclick="myfunction()">Click Me</button>
+    </body>
+</html>

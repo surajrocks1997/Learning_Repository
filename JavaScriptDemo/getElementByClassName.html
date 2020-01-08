@@ -1,0 +1,20 @@
+<html>
+    <head><title>
+        Hey There
+    </title></head>
+    <body>
+        <script type="text/javascript">
+        function myfunction() {
+            var cls = document.getElementsByClassName("grp1");
+            for (var i = 0; i < cls.length; i++) {
+                cls[i].style.color = "red";
+            }
+        }
+        </script>
+        <p class="grp1">Hey There</p>
+        <p>Hey There</p>
+        <p class="grp1">Hey There</p>
+        <p>Hey There</p>
+        <button onclick="myfunction()">Click Me</button>
+    </body>
+</html>

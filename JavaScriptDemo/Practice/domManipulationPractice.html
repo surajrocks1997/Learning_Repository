@@ -1,0 +1,25 @@
+<!-- write a code which alerts a message when username and password are equal -->
+
+<html>
+    <head>
+        <title>Sup</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function myfunction() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if(username==password)
+                alert("Username and Password are equal");
+            else    
+                alert("Not Equal");
+        }
+        </script>
+        Username: <input type="text" id="username">
+        <br>
+        Password: <input type="password" id="password">
+        <br>
+        <button onclick="myfunction()">Click me</button>
+
+    </body>
+</html>

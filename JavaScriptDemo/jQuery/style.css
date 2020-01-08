@@ -1,0 +1,35 @@
+/* # sign tells that it is pointing to the ID name */
+#head1{
+    color: red;
+}
+/* . operator here tells that it is pointing to class name */
+.myhead{
+    font-family: product sans;
+}
+.mydiv{
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+}
+div p{
+    color: brown;
+}
+html{
+    font-family: product sans;
+}
+.mycube{
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    opacity: 1;
+    position: absolute;
+    padding: 20px;
+}
+.mydivclass{
+    border-radius: 10px;
+    background-color: cyan;
+}
+.newparaclass{
+    font-weight: bolder;
+    font-style: italic;
+}

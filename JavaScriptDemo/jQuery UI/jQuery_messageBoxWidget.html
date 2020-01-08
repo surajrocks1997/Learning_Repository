@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.structure.css">
+        <link rel="stylesheet" href="JQuery UI-1.12.1 Library/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2 style="text-align: center; color: blue">Message Box Widget</h2>
+        <div id="firstdiv" class="mydiv">
+            <h3>Welcome to Telusko Learning</h3>
+            <br>
+            <button id="btn1">Click to show Message</button>
+        </div>
+        <div id="messagebox" title="Mesage Box" class="mydiv">
+            <h3>This is just a Dummy Title</h3>
+            <img src="D:\Productivity\Downloads\4K Wallpapers\Abstract Minimal/4K Ghosts II.jpg" 
+            width="720px">
+            <br><br>
+            <button id="btn2">Click Me</button>
+        </div>
+
+    </body>
+    <script src="../../Jquery Library/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="JQuery UI-1.12.1 Library/jquery-ui.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $("#btn1").click(function(){
+            $("#messagebox").dialog({
+                title: "Custom Message Box",
+                draggable: false,
+                resizable: false,
+                height: 605,
+                width: 800,
+                modal: true,
+
+                buttons: [
+                    {
+                        text: "Close",
+                        icon: "ui-icon-heart",
+                        click: function(){
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text: "Ok",
+                        icon: "ui-icon-heart",
+                        click: function(){
+                            alert("Hello Brother")
+                            // $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+        })
+        
+    </script>
+</html> 

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var opacity = 0;
+            var ID = 0;
+            function hide() {
+                var img = document.getElementById("img1");
+                opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity>0) {
+                    opacity = opacity - 0.05;
+                    img.style.opacity = opacity;
+                }
+                else    
+                    clearInterval(ID);
+            }
+            function show() {
+                var img = document.getElementById("img1");
+                opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity<1) {
+                    opacity = opacity + 0.05;
+                    img.style.opacity = opacity;
+                }
+                else
+                    clearInterval(ID);
+            }
+            function fadeIn() {
+                ID = setInterval(show,100);
+            }
+            function fadeOut() {
+                ID = setInterval(hide,100);
+            }
+        </script>
+        <button id="btn1" onclick="fadeIn()">Fade In</button>
+        <br><br>
+        <img id="img1" src="Images/mountain-1920x1200-minimal-half-moon-hd-4792.jpg" width="500">
+        <br><br>
+        <button id="btn2" onclick="fadeOut()">Fade Out</button>
+    </body>
+</html>

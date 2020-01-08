@@ -1,0 +1,32 @@
+<!-- taking input from textbox -->
+
+<html>
+    <head>
+        <title>Sup</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        /*first function works when button is pressed and it changes the text
+        second function works when another button is pressed and it shows the value entered
+         in the alert box
+        */
+            function ClickMe() {
+                document.getElementById("text").innerText="This is another text";
+                alert("Button Clicked");
+            }
+            function ClickMe1() {
+                var show = document.getElementById("text1").value;
+                alert(show);
+            }
+        </script>
+
+        <button onclick="ClickMe1()" id="btn1">Click Me</button>
+        <h2 id="text">This is one text</h2>
+
+        <input type="text" id="text1" placeholder="enter text here">
+        <br>
+        <button onclick="ClickMe1()" id="btn1">Click Me</button>
+
+    </body>
+</html>
