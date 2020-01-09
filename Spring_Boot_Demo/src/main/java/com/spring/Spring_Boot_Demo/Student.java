@@ -1,6 +1,7 @@
 package com.spring.Spring_Boot_Demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,6 +12,7 @@ public class Student {
 	private String Tech;
 	
 	@Autowired
+//	@Qualifier("laptop")	// to search using name
 	private Laptop laptop;
 	
 	public Laptop getLaptop() {
