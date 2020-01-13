@@ -20,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.Spring_JPA.dao.StudentRepo;
 import com.spring.Spring_JPA.model.Student;
 
+//@Controller
 @RestController
 public class StudentController {
 
