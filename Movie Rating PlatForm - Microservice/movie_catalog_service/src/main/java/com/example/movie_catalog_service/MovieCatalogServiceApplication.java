@@ -12,8 +12,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 @EnableEurekaClient
 public class MovieCatalogServiceApplication {
 
-	@Bean
 	@LoadBalanced
+	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
