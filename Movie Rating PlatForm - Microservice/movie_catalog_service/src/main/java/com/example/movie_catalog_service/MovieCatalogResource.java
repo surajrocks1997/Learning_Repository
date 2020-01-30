@@ -17,6 +17,9 @@ import com.example.movie_catalog_service.model.CatalogItem;
 import com.example.movie_catalog_service.model.Movie;
 import com.example.movie_catalog_service.model.Rating;
 import com.example.movie_catalog_service.model.UserRating;
+import com.example.movie_catalog_service.service.MovieInfo;
+import com.example.movie_catalog_service.service.UserRatingInfo;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @RequestMapping("/catalog")
@@ -28,27 +31,28 @@ public class MovieCatalogResource {
 	@Autowired
 	private WebClient.Builder webClientBuilder;
 
+	@Autowired
+	MovieInfo movieInfo;
+	
+	@Autowired
+	UserRatingInfo userRatingInfo; 
+	
 	@RequestMapping("/{userId}")
 	public List<CatalogItem> getCatalog(@PathVariable("userId") String userId){
 
-		UserRating userRating = restTemplate.getForObject("http://ratings-data-service/ratingsdata/users/" + userId, UserRating.class);
+		UserRating userRating = userRatingInfo.getUserRating(userId);
 
 		return userRating.getRatings().stream()
-				.map(rating -> {
-					Movie movie = restTemplate.getForObject("http://movie-info-service/movies/" + rating.getMovieId(), Movie.class);
-					return new CatalogItem(movie.getName(), movie.getDescription(), rating.getRating());
-				})
+				.map(rating -> movieInfo.getCatalogItem(rating))
 				.collect(Collectors.toList());
+	
+		
 		//			Movie movie = webClientBuilder.build()
 		//				.get()
 		//				.uri("http://localhost:8082/movies/" + rating.getMovieId())
 		//				.retrieve()
 		//				.bodyToMono(Movie.class)
 		//				.block();
-
-
-
-
 	}
 }
 
