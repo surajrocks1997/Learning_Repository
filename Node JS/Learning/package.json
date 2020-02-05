@@ -1,0 +1,15 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "learning repo for node js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn",
+    "nodejs"
+  ],
+  "author": "Suraj Gupta",
+  "license": "ISC"
+}
