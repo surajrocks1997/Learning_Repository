@@ -1,0 +1,14 @@
+body{
+    font-family: product sans;
+    padding: 30px;
+}
+h1{
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    text-align: center;
+}

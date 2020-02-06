@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/styles.css">
+    </head>
+    <body>
+        <script src="" async defer></script>
+        <%- include ('partials/nav.ejs') %>
+        <h1>Contact Us</h1>
+        <p>Thanks for getting in touch with us.</p>
+        <p>You will soon be contacted by <%= data.who %> from 
+            <%= data.department %> department. </p>
+        <p>We will soon be replying to you in <strong><%= data.email %></strong></p>
+    </body>
+</html>
+
