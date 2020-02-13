@@ -1,6 +1,5 @@
 const config = require('config');
 const express = require('express');
-const {check, validationResult} = require('express-validator');
 
 const home = require('./routes/home');
 const courses = require('./routes/courses');
